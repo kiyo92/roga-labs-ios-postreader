@@ -10,6 +10,7 @@ import UIKit
 
 class PostViewController: UIViewController, UITableViewDelegate,UITableViewDataSource {
     
+    @IBOutlet weak var spinner: UIActivityIndicatorView!
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var mainTitleLabel: UILabel!
     var posts : [PostData] = []
@@ -19,13 +20,15 @@ class PostViewController: UIViewController, UITableViewDelegate,UITableViewDataS
 
         tableView.delegate = self
         tableView.dataSource = self
-        
+        spinner.startAnimating()
         //Chamando o metodo que vai acessar a api
         postModel.downloadPostData{
             (result) in
             self.posts = result
             self.tableView.reloadData()
+            self.spinner.stopAnimating()
         }
+        
 
     }
 

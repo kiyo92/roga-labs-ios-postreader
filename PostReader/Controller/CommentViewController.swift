@@ -10,6 +10,7 @@ import UIKit
 
 class CommentViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
+    @IBOutlet weak var spinner: UIActivityIndicatorView!
     @IBOutlet weak var commentHeaderLabel: UILabel!
     @IBOutlet weak var tableView: UITableView!
     var post: PostData!
@@ -23,11 +24,13 @@ class CommentViewController: UIViewController, UITableViewDelegate, UITableViewD
         tableView.delegate = self
         tableView.dataSource = self
         commentModel.postId = post.id
+        spinner.startAnimating()
         self.commentModel.downloadCommentData{
             (result) in
             self.commentData = result
             self.commentHeaderLabel.text = "O QUE A GALERA COMENTOU SOBRE \(self.post.title ?? "")"
             self.tableView.reloadData()
+            self.spinner.stopAnimating()
         }
     }
 

@@ -20,7 +20,7 @@ class CommentModel {
     
     func downloadCommentData(result: @escaping (_:[CommentData]) -> Void){
         var comments:[CommentData] = []
-        print("mopa")
+        
         AF.request("\(url)\(postId ?? -1)/comments").responseJSON{
             response in
             
@@ -32,6 +32,7 @@ class CommentModel {
                     }
                 }
                 result(comments)
+                
             }
             
         }

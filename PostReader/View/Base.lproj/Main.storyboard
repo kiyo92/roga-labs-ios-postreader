@@ -37,9 +37,13 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="100" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Ukw-As-miM">
                                 <rect key="frame" x="0.0" y="144" width="414" height="752"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <activityIndicatorView key="tableHeaderView" hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="medium" id="GBk-u9-aDg">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                </activityIndicatorView>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="post_cell" id="aVj-Q3-2Gd" customClass="PostViewCell" customModule="PostReader" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="414" height="100"/>
+                                        <rect key="frame" x="0.0" y="72" width="414" height="100"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="aVj-Q3-2Gd" id="D6o-HP-fXp">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="100"/>
@@ -83,6 +87,7 @@
                     </view>
                     <connections>
                         <outlet property="mainTitleLabel" destination="ofe-Zc-9we" id="GOd-8q-1xJ"/>
+                        <outlet property="spinner" destination="GBk-u9-aDg" id="kCe-P3-672"/>
                         <outlet property="tableView" destination="Ukw-As-miM" id="LNf-VF-re8"/>
                         <segue destination="Jlh-ak-jfI" kind="show" identifier="post_cell" id="mKF-Xb-cXL"/>
                     </connections>
@@ -121,9 +126,13 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="150" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="GbR-ay-HYL">
                                 <rect key="frame" x="0.0" y="100" width="414" height="742"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <activityIndicatorView key="tableHeaderView" hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="medium" id="u45-P6-RDB">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="20"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                </activityIndicatorView>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="comment_cell" id="QJA-sJ-bQn" userLabel="comment_cell" customClass="CommentViewCell" customModule="PostReader" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="414" height="150"/>
+                                        <rect key="frame" x="0.0" y="48" width="414" height="150"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxY="YES"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="QJA-sJ-bQn" id="wz1-7U-xNm">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="150"/>
@@ -181,6 +190,7 @@
                     <navigationItem key="navigationItem" id="8Mn-nu-VEa"/>
                     <connections>
                         <outlet property="commentHeaderLabel" destination="33o-gU-JHW" id="xn1-zw-0i9"/>
+                        <outlet property="spinner" destination="u45-P6-RDB" id="erC-WJ-Ipw"/>
                         <outlet property="tableView" destination="GbR-ay-HYL" id="RX3-qT-qZg"/>
                     </connections>
                 </viewController>

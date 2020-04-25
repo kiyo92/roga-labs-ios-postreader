@@ -8,6 +8,7 @@
 
 import Foundation
 import Alamofire
+import AlamofireNetworkActivityIndicator
 
 class PostModel {
     var url : String

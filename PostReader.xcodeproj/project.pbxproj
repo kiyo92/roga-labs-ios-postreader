@@ -23,6 +23,7 @@
 		6C45EA3C2453BB650065F797 /* CommentViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C45EA3B2453BB650065F797 /* CommentViewCell.swift */; };
 		6C45EA3E2453BE830065F797 /* CommentData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C45EA3D2453BE830065F797 /* CommentData.swift */; };
 		6C45EA402453BF650065F797 /* CommentModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C45EA3F2453BF650065F797 /* CommentModel.swift */; };
+		6CD6DE632454C81D00B8B0BC /* AlamofireNetworkActivityIndicator in Frameworks */ = {isa = PBXBuildFile; productRef = 6CD6DE622454C81D00B8B0BC /* AlamofireNetworkActivityIndicator */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -72,6 +73,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6C34F388245351A2002A61D1 /* Alamofire in Frameworks */,
+				6CD6DE632454C81D00B8B0BC /* AlamofireNetworkActivityIndicator in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -209,6 +211,7 @@
 			name = PostReader;
 			packageProductDependencies = (
 				6C34F387245351A2002A61D1 /* Alamofire */,
+				6CD6DE622454C81D00B8B0BC /* AlamofireNetworkActivityIndicator */,
 			);
 			productName = PostReader;
 			productReference = 6C34F350245346DA002A61D1 /* PostReader.app */;
@@ -284,6 +287,7 @@
 			mainGroup = 6C34F347245346DA002A61D1;
 			packageReferences = (
 				6C34F386245351A2002A61D1 /* XCRemoteSwiftPackageReference "Alamofire" */,
+				6CD6DE612454C81D00B8B0BC /* XCRemoteSwiftPackageReference "AlamofireNetworkActivityIndicator" */,
 			);
 			productRefGroup = 6C34F351245346DA002A61D1 /* Products */;
 			projectDirPath = "";
@@ -676,6 +680,14 @@
 				minimumVersion = 5.1.0;
 			};
 		};
+		6CD6DE612454C81D00B8B0BC /* XCRemoteSwiftPackageReference "AlamofireNetworkActivityIndicator" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/AlamofireNetworkActivityIndicator.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.1.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -683,6 +695,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 6C34F386245351A2002A61D1 /* XCRemoteSwiftPackageReference "Alamofire" */;
 			productName = Alamofire;
+		};
+		6CD6DE622454C81D00B8B0BC /* AlamofireNetworkActivityIndicator */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 6CD6DE612454C81D00B8B0BC /* XCRemoteSwiftPackageReference "AlamofireNetworkActivityIndicator" */;
+			productName = AlamofireNetworkActivityIndicator;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
